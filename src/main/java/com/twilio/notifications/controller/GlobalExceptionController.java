@@ -10,6 +10,13 @@ public class GlobalExceptionController {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public String handleAllException(Exception ex) {
-        return ex.getMessage();
+        return "Something unexpected happened. Keep calm, administrators were notified.";
+    }
+
+    private String customMessage(String exceptionMessage) {
+        return String.format("It appears the server is having Exception: %s " +
+                        "Go to: http://newrelic.com for more details. " +
+                        "Image URL: http://goo.gl/ObTXdX",
+                        exceptionMessage);
     }
 }
