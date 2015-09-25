@@ -1,4 +1,4 @@
-package com.twilio.notifications.initializer;
+package com.twilio.notifications;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
