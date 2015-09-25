@@ -1,5 +1,7 @@
 # Server Notifications on Spring
 
+[![Build Status](https://travis-ci.org/TwilioDevEd/server-notifications-spring.svg?branch=master)](https://travis-ci.org/TwilioDevEd/server-notifications-spring)
+
 <a href="http://howtodocs.s3.amazonaws.com/server-notifications-notification.png"
    target="_blank">
   <img src="http://howtodocs.s3.amazonaws.com/server-notifications-notification.png"
