@@ -2,14 +2,9 @@
 
 [![Build Status](https://travis-ci.org/TwilioDevEd/server-notifications-spring.svg?branch=master)](https://travis-ci.org/TwilioDevEd/server-notifications-spring)
 
-<a href="http://howtodocs.s3.amazonaws.com/server-notifications-notification.png"
-   target="_blank">
-  <img src="http://howtodocs.s3.amazonaws.com/server-notifications-notification.png"
-       alt="Notification on phone" width="60%" />
-</a>
+Use Twilio to send SMS alerts so that you never miss a critical issue.
 
-Use Twilio to create SMS server alerts so that you never miss a critical server
-issue.
+[Read the full tutorial here](https://www.twilio.com/docs/tutorials/walkthrough/server-notifications/java/spring)!
 
 ### Local Development
 
