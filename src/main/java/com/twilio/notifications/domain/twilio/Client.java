@@ -1,47 +1,25 @@
 package com.twilio.notifications.domain.twilio;
 
-import com.twilio.sdk.TwilioRestClient;
-import com.twilio.sdk.TwilioRestException;
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.twilio.http.TwilioRestClient;
 
 public class Client {
     private Credentials credentials;
-    private TwilioRestClient client;
+    private TwilioMessageCreator messageCreator;
 
     public Client() {
         this.credentials = new Credentials();
-        String accountSid = this.credentials.getAccountSid();
-        String authToken = this.credentials.getAuthToken();
-        this.client = new TwilioRestClient(accountSid, authToken);
+        this.messageCreator = new TwilioMessageCreator(
+                new TwilioRestClient.Builder(credentials.getAccountSid(), credentials.getAuthToken()).build()
+        );
     }
 
-    public Client(TwilioRestClient client, Credentials credentials) {
+    public Client(TwilioMessageCreator messageCreator, Credentials credentials) {
         this.credentials = credentials;
-        this.client = client;
+        this.messageCreator = messageCreator;
     }
 
     public void sendMessage(String to, String message, String mediaUrl) {
-        List<NameValuePair> params = getParams(to, message, mediaUrl);
-
-        try {
-            this.client.getAccount().getMessageFactory().create(params);
-        } catch (TwilioRestException exception) {
-            exception.printStackTrace();
-        }
-    }
-
-    private List<NameValuePair> getParams(String to, String message, String mediaUrl) {
-        List<NameValuePair> params = new ArrayList<>();
-        params.add(new BasicNameValuePair("Body", message));
-        params.add(new BasicNameValuePair("To", to));
-        params.add(new BasicNameValuePair("From", this.credentials.getPhoneNumber()));
-        params.add(new BasicNameValuePair("MediaUrl", mediaUrl));
-
-        return params;
+        messageCreator.create(to, credentials.getPhoneNumber(), message, mediaUrl);
     }
 }
 
