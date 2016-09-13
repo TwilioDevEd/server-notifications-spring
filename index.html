@@ -9,8 +9,8 @@
 .wrapper {
   height:100%;
   width:100%;
-}</style><link rel="shortcut icon" href="//twilio.com/bundles/marketing/img/favicons/favicon.ico"><link rel="apple-touch-icon" href="//twilio.com/bundles/marketing/img/favicons/favicon_57.png"><link rel="apple-touch-icon" sizes="72x72" href="//twilio.com/bundles/marketing/img/favicons/favicon_72.png"><link rel="apple-touch-icon" sizes="114x114" href="//twilio.com/bundles/marketing/img/favicons/favicon_114.png"><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link rel="stylesheet" href="viewsaurus.css"></head><body><div class="wrapper"><div id="viewsaurus" data-title="Server Notifications"><div class="saurus-panes"><div class="saurus-prose"><div class="saurus-prose-header"><div class="title-outer"><span class="step-title">Server Notifications</span></div></div><div class="saurus-nav-buttons"><div class="saurus-nav-button nav-overview"><div class="saurus-nav-button-inner"><i class="fa fa-fw fa-list"></i></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-previous"><div class="saurus-nav-button-inner"><a href=""> <i class="fa fa-fw fa-play fa-rotate-180"></i></a></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-next clickable"><div class="saurus-nav-button-inner"><a href="#1"> <i class="fa fa-fw fa-play"></i></a></div></div><div class="saurus-next-title"><span class="next-title-inner"></span></div></div><div class="saurus-progress-bar"></div><div class="saurus-start"><p>Never miss another server outage. Learn how to build a server notification system that will alert all administrators via SMS when a server outage occurs.</p><a href="#0">Start Tutorial</a></div><div class="saurus-content"><div data-title="Server Notifications and Alerts" class="chapter"><div data-file="src/main/resources/administrators.json" class="step"><h2 id="what-does-this-thing-do-">What does this thing do?</h2>
-<p>This <a href="https://spring.io/">Spring</a> sample application demonstrates
+}</style><link rel="shortcut icon" href="//twilio.com/bundles/marketing/img/favicons/favicon.ico"><link rel="apple-touch-icon" href="//twilio.com/bundles/marketing/img/favicons/favicon_57.png"><link rel="apple-touch-icon" sizes="72x72" href="//twilio.com/bundles/marketing/img/favicons/favicon_72.png"><link rel="apple-touch-icon" sizes="114x114" href="//twilio.com/bundles/marketing/img/favicons/favicon_114.png"><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link rel="stylesheet" href="viewsaurus.css"></head><body><div class="wrapper"><div id="viewsaurus" data-title="Server Notifications"><div class="saurus-panes"><div class="saurus-prose"><div class="saurus-prose-header"><div class="title-outer"><span class="step-title">Server Notifications</span></div></div><div class="saurus-nav-buttons"><div class="saurus-nav-button nav-overview"><div class="saurus-nav-button-inner"><i class="fa fa-fw fa-list"></i></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-previous"><div class="saurus-nav-button-inner"><a href=""> <i class="fa fa-fw fa-play fa-rotate-180"></i></a></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-next clickable"><div class="saurus-nav-button-inner"><a href="#1"> <i class="fa fa-fw fa-play"></i></a></div></div><div class="saurus-next-title"><span class="next-title-inner"></span></div></div><div class="saurus-progress-bar"></div><div class="saurus-start"><p>Never miss another server outage. Learn how to build a server notification system that will alert all administrators via SMS when a server outage occurs.</p><a href="#0">Start Tutorial</a></div><div class="saurus-content"><div data-title="Server Notifications and Alerts" class="chapter"><div data-file="src/main/resources/administrators.json" class="step"><h2 id="what-does-this-thing-do-">What Does This Thing Do?</h2>
+<p>This <a href="//spring.io/">Spring</a> sample application demonstrates
 how to send SMS alerts to a list of system administrators if something goes
 wrong on your server. In this tutorial, we&#39;ll show you the key bits of code
 to make this work.</p>
@@ -18,35 +18,38 @@ to make this work.</p>
 <hr>
 <p><strong>See Also:</strong></p>
 <ul>
-<li><a href="https://spring.io/">Spring</a></li>
-<li><a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a></li>
+<li><a href="//spring.io/">Spring</a></li>
+<li><a href="//spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a></li>
 </ul>
 </div><div data-file="src/main/resources/administrators.json" class="step"><h2 id="list-server-admins">List server admins</h2>
 <p>Create a list of administrators who should be notified if a server error occurs.
 Each administrator must have a <code>phoneNumber</code>.</p>
-</div><div data-file="notifications/domain/twilio/Client.java" data-highlight="15-20" class="step"><h2 id="configure-twilio-client">Configure Twilio client</h2>
-<p>In order to send a message we&#39;ll need to initialize the <a href="https://www.twilio.com/docs/java/install">Twilio Java Helper
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="//json.org/">JSON</a></li>
+</ul>
+</div><div data-file="src/main/java/com/twilio/notifications/domain/twilio/Client.java" data-highlight="9-14" class="step"><h2 id="configure-twilio-client">Configure Twilio Client</h2>
+<p>In order to send a message we&#39;ll need to initialize the <a href="//www.twilio.com/docs/java/install">Twilio Java Helper
 Library</a>,
 which requires reading our <code>TWILIO_ACCOUNT_SID</code> and <code>TWILIO_AUTH_TOKEN</code>
 defined as environment variables.</p>
 <hr>
 <p><strong>See Also:</strong></p>
 <ul>
-<li><a href="https://www.twilio.com/docs/java/install">Twilio Java Helper Library</a></li>
-<li><a href="http://mvnrepository.com/artifact/com.twilio.sdk/twilio-java-sdk">Twilio Java
-SDK</a></li>
+<li><a href="//www.twilio.com/docs/java/install">Twilio Java Helper Library</a></li>
+<li><a href="//mvnrepository.com/artifact/com.twilio.sdk/twilio">Twilio Java SDK</a></li>
 </ul>
-</div><div data-file="notifications/controller/GlobalExceptionController.java" data-highlight="10,12-15,26,34" class="step"><h2 id="handle-all-errors">Handle all errors</h2>
+</div><div data-file="notifications/controller/GlobalExceptionController.java" data-highlight="10,12-15,26,34" class="step"><h2 id="handle-all-errors">Handle All Errors</h2>
 <p>Spring MVC provides several techniques to handle errors, but in this case
 we are interested in handling all our application&#39;s exceptions. 
 For that purpose, we can use 
-<a href="https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc#global-exception-handling">Global Exception Handling</a>.</p>
+<a href="//spring.io/blog/2013/11/01/exception-handling-in-spring-mvc#global-exception-handling">Global Exception Handling</a>.</p>
 <hr>
 <p><strong>See Also:</strong></p>
 <ul>
 <li><a href="https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc">Exception Handling in Spring MVC</a></li>
 </ul>
-</div><div data-file="notifications/controller/GlobalExceptionController.java" data-highlight="28-33" class="step"><h2 id="create-a-custom-alert-message">Create a custom alert message</h2>
+</div><div data-file="notifications/controller/GlobalExceptionController.java" data-highlight="28-33" class="step"><h2 id="create-a-custom-alert-message">Create a Custom Alert Message</h2>
 <p>Here we create an alert message to send out via text message. You might also
 decide to include a picture with your alert message, maybe a screenshot of the
 application when the crash happened?</p>
@@ -55,7 +58,7 @@ application when the crash happened?</p>
 <ul>
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format">String.Format</a></li>
 </ul>
-</div><div data-file="notifications/service/AdministratorService.java" data-highlight="25" class="step"><h2 id="reading-the-admins-from-the-json-file">Reading the admins from the JSON file</h2>
+</div><div data-file="notifications/service/AdministratorService.java" data-highlight="25" class="step"><h2 id="reading-the-admins-from-the-json-file">Reading the Admins from the JSON File</h2>
 <p>Next we read the admins from our JSON file. We&#39;re relying on the
 <a href="https://github.com/google/gson">Gson</a> Java library to convert our JSON
 text file into <code>Administrator</code> objects, which we created in our application.</p>
@@ -63,9 +66,8 @@ text file into <code>Administrator</code> objects, which we created in our appli
 <p><strong>See Also:</strong></p>
 <ul>
 <li><a href="https://github.com/google/gson">Gson</a></li>
-<li><a href="http://www.json.org/">JSON</a></li>
 </ul>
-</div><div data-file="notifications/domain/twilio/Client.java" data-highlight="27-45" class="step"><h2 id="sending-a-text-message">Sending a text message</h2>
+</div><div data-file="src/main/java/com/twilio/notifications/domain/twilio/TwilioMessageCreator.java" class="step"><h2 id="sending-a-text-message">Sending a Text Message</h2>
 <p>There are the three parameters needed to <a href="https://www.twilio.com/docs/quickstart/java/sms/sending-via-rest">send an
 SMS</a>
 using the <a href="https://www.twilio.com/docs/api/rest">Twilio REST API</a>:
@@ -92,13 +94,14 @@ Reminders</strong></a></p>
 <p>Send your customers a text message when they have an upcoming appointment,
 this tutorial shows you how to do it from a background job.</p>
 <h3 id="did-this-help-">Did this help?</h3>
-<p>Thanks for checking out this tutorial! If you have any feedback to share
-with us, we&#39;d love to hear it. Tweet <a href="http://twitter.com/twilio">@twilio</a>
-to let us know what you think.</p>
+<p>Thanks for checking this tutorial out! If you have any feedback
+to share with us, we&#39;d love to hear it.
+<a href="mailto:deved-oss@twilio.com">Contact the Twilio Developer Education Team</a> to let us know what you think.</p>
 </div></div>
 <div class="saurus-files" style="display:none;"><textarea class="saurus-file" data-file="src/main/resources/administrators.json" data-mode="json">WwogIHsKICAgICJuYW1lIjogIkJvYiIsCiAgICAicGhvbmVOdW1iZXIiOiAiKzEyMDI1NTUwMTk3IgogIH0sCiAgewogICAgIm5hbWUiOiAiQWxpY2UiLAogICAgInBob25lTnVtYmVyIjogIisxMjAyNTU1MDg5MCIKICB9Cl0=</textarea>
-<textarea class="saurus-file" data-file="notifications/domain/twilio/Client.java" data-mode="java">cGFja2FnZSBjb20udHdpbGlvLm5vdGlmaWNhdGlvbnMuZG9tYWluLnR3aWxpbzsKCmltcG9ydCBjb20udHdpbGlvLnNkay5Ud2lsaW9SZXN0Q2xpZW50OwppbXBvcnQgY29tLnR3aWxpby5zZGsuVHdpbGlvUmVzdEV4Y2VwdGlvbjsKaW1wb3J0IG9yZy5hcGFjaGUuaHR0cC5OYW1lVmFsdWVQYWlyOwppbXBvcnQgb3JnLmFwYWNoZS5odHRwLm1lc3NhZ2UuQmFzaWNOYW1lVmFsdWVQYWlyOwoKaW1wb3J0IGphdmEudXRpbC5BcnJheUxpc3Q7CmltcG9ydCBqYXZhLnV0aWwuTGlzdDsKCnB1YmxpYyBjbGFzcyBDbGllbnQgewogICAgcHJpdmF0ZSBDcmVkZW50aWFscyBjcmVkZW50aWFsczsKICAgIHByaXZhdGUgVHdpbGlvUmVzdENsaWVudCBjbGllbnQ7CgogICAgcHVibGljIENsaWVudCgpIHsKICAgICAgICB0aGlzLmNyZWRlbnRpYWxzID0gbmV3IENyZWRlbnRpYWxzKCk7CiAgICAgICAgU3RyaW5nIGFjY291bnRTaWQgPSB0aGlzLmNyZWRlbnRpYWxzLmdldEFjY291bnRTaWQoKTsKICAgICAgICBTdHJpbmcgYXV0aFRva2VuID0gdGhpcy5jcmVkZW50aWFscy5nZXRBdXRoVG9rZW4oKTsKICAgICAgICB0aGlzLmNsaWVudCA9IG5ldyBUd2lsaW9SZXN0Q2xpZW50KGFjY291bnRTaWQsIGF1dGhUb2tlbik7CiAgICB9CgogICAgcHVibGljIENsaWVudChUd2lsaW9SZXN0Q2xpZW50IGNsaWVudCwgQ3JlZGVudGlhbHMgY3JlZGVudGlhbHMpIHsKICAgICAgICB0aGlzLmNyZWRlbnRpYWxzID0gY3JlZGVudGlhbHM7CiAgICAgICAgdGhpcy5jbGllbnQgPSBjbGllbnQ7CiAgICB9CgogICAgcHVibGljIHZvaWQgc2VuZE1lc3NhZ2UoU3RyaW5nIHRvLCBTdHJpbmcgbWVzc2FnZSwgU3RyaW5nIG1lZGlhVXJsKSB7CiAgICAgICAgTGlzdDxOYW1lVmFsdWVQYWlyPiBwYXJhbXMgPSBnZXRQYXJhbXModG8sIG1lc3NhZ2UsIG1lZGlhVXJsKTsKCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgdGhpcy5jbGllbnQuZ2V0QWNjb3VudCgpLmdldE1lc3NhZ2VGYWN0b3J5KCkuY3JlYXRlKHBhcmFtcyk7CiAgICAgICAgfSBjYXRjaCAoVHdpbGlvUmVzdEV4Y2VwdGlvbiBleGNlcHRpb24pIHsKICAgICAgICAgICAgZXhjZXB0aW9uLnByaW50U3RhY2tUcmFjZSgpOwogICAgICAgIH0KICAgIH0KCiAgICBwcml2YXRlIExpc3Q8TmFtZVZhbHVlUGFpcj4gZ2V0UGFyYW1zKFN0cmluZyB0bywgU3RyaW5nIG1lc3NhZ2UsIFN0cmluZyBtZWRpYVVybCkgewogICAgICAgIExpc3Q8TmFtZVZhbHVlUGFpcj4gcGFyYW1zID0gbmV3IEFycmF5TGlzdDw+KCk7CiAgICAgICAgcGFyYW1zLmFkZChuZXcgQmFzaWNOYW1lVmFsdWVQYWlyKCJCb2R5IiwgbWVzc2FnZSkpOwogICAgICAgIHBhcmFtcy5hZGQobmV3IEJhc2ljTmFtZVZhbHVlUGFpcigiVG8iLCB0bykpOwogICAgICAgIHBhcmFtcy5hZGQobmV3IEJhc2ljTmFtZVZhbHVlUGFpcigiRnJvbSIsIHRoaXMuY3JlZGVudGlhbHMuZ2V0UGhvbmVOdW1iZXIoKSkpOwogICAgICAgIHBhcmFtcy5hZGQobmV3IEJhc2ljTmFtZVZhbHVlUGFpcigiTWVkaWFVcmwiLCBtZWRpYVVybCkpOwoKICAgICAgICByZXR1cm4gcGFyYW1zOwogICAgfQp9Cgo=</textarea>
+<textarea class="saurus-file" data-file="src/main/java/com/twilio/notifications/domain/twilio/Client.java" data-mode="java">cGFja2FnZSBjb20udHdpbGlvLm5vdGlmaWNhdGlvbnMuZG9tYWluLnR3aWxpbzsKCmltcG9ydCBjb20udHdpbGlvLmh0dHAuVHdpbGlvUmVzdENsaWVudDsKCnB1YmxpYyBjbGFzcyBDbGllbnQgewogICAgcHJpdmF0ZSBDcmVkZW50aWFscyBjcmVkZW50aWFsczsKICAgIHByaXZhdGUgVHdpbGlvTWVzc2FnZUNyZWF0b3IgbWVzc2FnZUNyZWF0b3I7CgogICAgcHVibGljIENsaWVudCgpIHsKICAgICAgICB0aGlzLmNyZWRlbnRpYWxzID0gbmV3IENyZWRlbnRpYWxzKCk7CiAgICAgICAgdGhpcy5tZXNzYWdlQ3JlYXRvciA9IG5ldyBUd2lsaW9NZXNzYWdlQ3JlYXRvcigKICAgICAgICAgICAgICAgIG5ldyBUd2lsaW9SZXN0Q2xpZW50LkJ1aWxkZXIoY3JlZGVudGlhbHMuZ2V0QWNjb3VudFNpZCgpLCBjcmVkZW50aWFscy5nZXRBdXRoVG9rZW4oKSkuYnVpbGQoKQogICAgICAgICk7CiAgICB9CgogICAgcHVibGljIENsaWVudChUd2lsaW9NZXNzYWdlQ3JlYXRvciBtZXNzYWdlQ3JlYXRvciwgQ3JlZGVudGlhbHMgY3JlZGVudGlhbHMpIHsKICAgICAgICB0aGlzLmNyZWRlbnRpYWxzID0gY3JlZGVudGlhbHM7CiAgICAgICAgdGhpcy5tZXNzYWdlQ3JlYXRvciA9IG1lc3NhZ2VDcmVhdG9yOwogICAgfQoKICAgIHB1YmxpYyB2b2lkIHNlbmRNZXNzYWdlKFN0cmluZyB0bywgU3RyaW5nIG1lc3NhZ2UsIFN0cmluZyBtZWRpYVVybCkgewogICAgICAgIG1lc3NhZ2VDcmVhdG9yLmNyZWF0ZSh0bywgY3JlZGVudGlhbHMuZ2V0UGhvbmVOdW1iZXIoKSwgbWVzc2FnZSwgbWVkaWFVcmwpOwogICAgfQp9Cgo=</textarea>
 <textarea class="saurus-file" data-file="notifications/controller/GlobalExceptionController.java" data-mode="java">cGFja2FnZSBjb20udHdpbGlvLm5vdGlmaWNhdGlvbnMuY29udHJvbGxlcjsKCmltcG9ydCBjb20udHdpbGlvLm5vdGlmaWNhdGlvbnMuZG9tYWluLkFkbWluaXN0cmF0b3I7CmltcG9ydCBjb20udHdpbGlvLm5vdGlmaWNhdGlvbnMuZG9tYWluLnR3aWxpby5DbGllbnQ7CmltcG9ydCBjb20udHdpbGlvLm5vdGlmaWNhdGlvbnMuc2VydmljZS5BZG1pbmlzdHJhdG9yU2VydmljZTsKaW1wb3J0IG9yZy5zcHJpbmdmcmFtZXdvcmsud2ViLmJpbmQuYW5ub3RhdGlvbi5Db250cm9sbGVyQWR2aWNlOwppbXBvcnQgb3JnLnNwcmluZ2ZyYW1ld29yay53ZWIuYmluZC5hbm5vdGF0aW9uLkV4Y2VwdGlvbkhhbmRsZXI7CmltcG9ydCBvcmcuc3ByaW5nZnJhbWV3b3JrLndlYi5iaW5kLmFubm90YXRpb24uUmVzcG9uc2VCb2R5OwoKQENvbnRyb2xsZXJBZHZpY2UKQFN1cHByZXNzV2FybmluZ3MoIlVudXNlZERlY2xhcmF0aW9uIikKcHVibGljIGNsYXNzIEdsb2JhbEV4Y2VwdGlvbkNvbnRyb2xsZXIgewogICAgQEV4Y2VwdGlvbkhhbmRsZXIoRXhjZXB0aW9uLmNsYXNzKQogICAgQFJlc3BvbnNlQm9keQogICAgcHVibGljIFN0cmluZyBoYW5kbGVBbGxFeGNlcHRpb24oRXhjZXB0aW9uIGV4KSB7CiAgICAgICAgU3RyaW5nIG1lc3NhZ2UgPSBjdXN0b21NZXNzYWdlKGV4LmdldE1lc3NhZ2UoKSk7CiAgICAgICAgU3RyaW5nIG1lZGlhVXJsID0gImh0dHA6Ly9nb28uZ2wvT2JUWGRYIjsKCiAgICAgICAgLy8gU2VuZCBhIG1lc3NhZ2UgdG8gdGhlIGFkbWluaXN0cmF0b3JzIHdoZW4gc29tZXRoaW5nIGdvZXMgdW5leHBlY3RlZGx5IHdyb25nLgogICAgICAgIEFkbWluaXN0cmF0b3JbXSBhZG1pbmlzdHJhdG9ycyA9IG5ldyBBZG1pbmlzdHJhdG9yU2VydmljZSgpLmdldEFkbWluaXN0cmF0b3JzKCk7CiAgICAgICAgZm9yIChBZG1pbmlzdHJhdG9yIGFkbWluaXN0cmF0b3IgOiBhZG1pbmlzdHJhdG9ycykgewogICAgICAgICAgICBuZXcgQ2xpZW50KCkuc2VuZE1lc3NhZ2UoYWRtaW5pc3RyYXRvci5nZXRQaG9uZU51bWJlcigpLCBtZXNzYWdlLCBtZWRpYVVybCk7CiAgICAgICAgfQoKICAgICAgICByZXR1cm4gIlNvbWV0aGluZyB1bmV4cGVjdGVkIGhhcHBlbmVkLiBLZWVwIGNhbG0sIGFkbWluaXN0cmF0b3JzIHdlcmUgbm90aWZpZWQuIjsKICAgIH0KCiAgICBwcml2YXRlIFN0cmluZyBjdXN0b21NZXNzYWdlKFN0cmluZyBleGNlcHRpb25NZXNzYWdlKSB7CiAgICAgICAgcmV0dXJuIFN0cmluZy5mb3JtYXQoIkl0IGFwcGVhcnMgdGhlIHNlcnZlciBpcyBoYXZpbmcgRXhjZXB0aW9uOiAlcyAiICsKICAgICAgICAgICAgICAgICAgICAgICAgIkdvIHRvOiBodHRwOi8vbmV3cmVsaWMuY29tIGZvciBtb3JlIGRldGFpbHMuICIgKwogICAgICAgICAgICAgICAgICAgICAgICAiSW1hZ2UgVVJMOiBodHRwOi8vZ29vLmdsL09iVFhkWCIsCiAgICAgICAgICAgICAgICAgICAgICAgIGV4Y2VwdGlvbk1lc3NhZ2UpOwogICAgfQp9Cg==</textarea>
 <textarea class="saurus-file" data-file="notifications/service/AdministratorService.java" data-mode="java">cGFja2FnZSBjb20udHdpbGlvLm5vdGlmaWNhdGlvbnMuc2VydmljZTsKCgppbXBvcnQgY29tLmdvb2dsZS5nc29uLkdzb247CmltcG9ydCBjb20udHdpbGlvLm5vdGlmaWNhdGlvbnMuZG9tYWluLkFkbWluaXN0cmF0b3I7CmltcG9ydCBvcmcuc3ByaW5nZnJhbWV3b3JrLnN0ZXJlb3R5cGUuU2VydmljZTsKCmltcG9ydCBqYXZhLmlvLkZpbGVOb3RGb3VuZEV4Y2VwdGlvbjsKaW1wb3J0IGphdmEuaW8uRmlsZVJlYWRlcjsKCkBTZXJ2aWNlCnB1YmxpYyBjbGFzcyBBZG1pbmlzdHJhdG9yU2VydmljZSB7CiAgICBwcml2YXRlIFN0cmluZyBmaWxlUGF0aDsKCiAgICBwdWJsaWMgQWRtaW5pc3RyYXRvclNlcnZpY2UoKSB7CiAgICAgICAgdGhpcy5maWxlUGF0aCA9IGdldENsYXNzKCkuZ2V0Q2xhc3NMb2FkZXIoKS5nZXRSZXNvdXJjZSgiYWRtaW5pc3RyYXRvcnMuanNvbiIpLmdldFBhdGgoKTsKICAgIH0KCiAgICBwdWJsaWMgQWRtaW5pc3RyYXRvclNlcnZpY2UoU3RyaW5nIGZpbGVQYXRoKSB7CiAgICAgICAgdGhpcy5maWxlUGF0aCA9IGZpbGVQYXRoOwogICAgfQoKICAgIHB1YmxpYyBBZG1pbmlzdHJhdG9yW10gZ2V0QWRtaW5pc3RyYXRvcnMoKSB7CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgcmV0dXJuIG5ldyBHc29uKCkuZnJvbUpzb24obmV3IEZpbGVSZWFkZXIoZmlsZVBhdGgpLCBBZG1pbmlzdHJhdG9yW10uY2xhc3MpOwogICAgICAgIH0gY2F0Y2ggKEZpbGVOb3RGb3VuZEV4Y2VwdGlvbiBlKSB7CiAgICAgICAgICAgIGUucHJpbnRTdGFja1RyYWNlKCk7CgogICAgICAgICAgICByZXR1cm4gbmV3IEFkbWluaXN0cmF0b3JbMF07CiAgICAgICAgfQogICAgfQp9Cgo=</textarea>
+<textarea class="saurus-file" data-file="src/main/java/com/twilio/notifications/domain/twilio/TwilioMessageCreator.java" data-mode="java">cGFja2FnZSBjb20udHdpbGlvLm5vdGlmaWNhdGlvbnMuZG9tYWluLnR3aWxpbzsKCmltcG9ydCBjb20udHdpbGlvLmh0dHAuVHdpbGlvUmVzdENsaWVudDsKaW1wb3J0IGNvbS50d2lsaW8ucmVzdC5hcGkudjIwMTAuYWNjb3VudC5NZXNzYWdlOwppbXBvcnQgY29tLnR3aWxpby5yZXN0LmFwaS52MjAxMC5hY2NvdW50Lk1lc3NhZ2VDcmVhdG9yOwppbXBvcnQgY29tLnR3aWxpby50eXBlLlBob25lTnVtYmVyOwoKcHVibGljIGNsYXNzIFR3aWxpb01lc3NhZ2VDcmVhdG9yIHsKICAgIHByaXZhdGUgZmluYWwgVHdpbGlvUmVzdENsaWVudCBjbGllbnQ7CgogICAgcHVibGljIFR3aWxpb01lc3NhZ2VDcmVhdG9yKFR3aWxpb1Jlc3RDbGllbnQgY2xpZW50KSB7CiAgICAgICAgdGhpcy5jbGllbnQgPSBjbGllbnQ7CiAgICB9CgogICAgcHVibGljIE1lc3NhZ2UgY3JlYXRlKFN0cmluZyB0bywgU3RyaW5nIGZyb20sIFN0cmluZyBib2R5LCBTdHJpbmcgbWVkaWFVcmwpIHsKICAgICAgICBNZXNzYWdlQ3JlYXRvciBtZXNzYWdlQ3JlYXRvciA9IG5ldyBNZXNzYWdlQ3JlYXRvcigKICAgICAgICAgICAgICAgIG5ldyBQaG9uZU51bWJlcih0byksCiAgICAgICAgICAgICAgICBuZXcgUGhvbmVOdW1iZXIoZnJvbSksCiAgICAgICAgICAgICAgICBib2R5KTsKICAgICAgICBtZXNzYWdlQ3JlYXRvci5zZXRNZWRpYVVybChtZWRpYVVybCk7CgogICAgICAgIHJldHVybiBtZXNzYWdlQ3JlYXRvci5leGVjdXRlKHRoaXMuY2xpZW50KTsKICAgIH0KfQoK</textarea>
 </div>
 </div><div class="saurus-overview"><ul></ul></div></div><div class="saurus-code"><div class="file-path"><span class="crumb-container"></span><i class="fa fa-fw fa-folder"></i></div><div class="saurus-editor"></div></div><div class="saurus-explorer"><div class="saurus-file-list"></div><a href="https://github.com/TwilioDevEd/server-notifications-spring" target="_blank" class="explorer-get-code"> <i class="fa fa-lg fa-github-square"> </i>View Code on GitHub</a></div></div></div></div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script><script src="ace/ace.js"></script><script src="ace/theme-monokai.js"></script><script src="viewsaurus.js"></script></body></html>

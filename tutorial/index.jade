@@ -1,9 +1,9 @@
 .chapter(data-title='Server Notifications and Alerts')
   .step(data-file='src/main/resources/administrators.json')
     :markdown
-      ## What does this thing do?
+      ## What Does This Thing Do?
 
-      This [Spring](https://spring.io/) sample application demonstrates
+      This [Spring](//spring.io/) sample application demonstrates
       how to send SMS alerts to a list of system administrators if something goes
       wrong on your server. In this tutorial, we'll show you the key bits of code
       to make this work.
@@ -13,8 +13,8 @@
       ---
 
       **See Also:**
-      * [Spring](https://spring.io/)
-      * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
+      * [Spring](//spring.io/)
+      * [Serving Web Content with Spring MVC](//spring.io/guides/gs/serving-web-content/)
 
   .step(data-file='src/main/resources/administrators.json')
     :markdown
@@ -23,32 +23,34 @@
       Create a list of administrators who should be notified if a server error occurs.
       Each administrator must have a `phoneNumber`.
 
-  .step(data-file='notifications/domain/twilio/Client.java',
-  data-highlight='15-20')
+      **See Also:**
+      * [JSON](//json.org/)
+
+  .step(data-file='src/main/java/com/twilio/notifications/domain/twilio/Client.java',
+  data-highlight='9-14')
     :markdown
-      ## Configure Twilio client
+      ## Configure Twilio Client
 
       In order to send a message we'll need to initialize the [Twilio Java Helper
-      Library](https://www.twilio.com/docs/java/install),
+      Library](//www.twilio.com/docs/java/install),
       which requires reading our `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN`
       defined as environment variables.
 
       ---
 
       **See Also:**
-      * [Twilio Java Helper Library](https://www.twilio.com/docs/java/install)
-      * [Twilio Java
-      SDK](http://mvnrepository.com/artifact/com.twilio.sdk/twilio-java-sdk)
+      * [Twilio Java Helper Library](//www.twilio.com/docs/java/install)
+      * [Twilio Java SDK](//mvnrepository.com/artifact/com.twilio.sdk/twilio)
 
   .step(data-file='notifications/controller/GlobalExceptionController.java',
   data-highlight='10,12-15,26,34')
     :markdown
-      ## Handle all errors
+      ## Handle All Errors
 
       Spring MVC provides several techniques to handle errors, but in this case
       we are interested in handling all our application's exceptions. 
       For that purpose, we can use 
-      [Global Exception Handling](https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc#global-exception-handling).
+      [Global Exception Handling](//spring.io/blog/2013/11/01/exception-handling-in-spring-mvc#global-exception-handling).
 
       ---
 
@@ -58,7 +60,7 @@
   .step(data-file='notifications/controller/GlobalExceptionController.java',
   data-highlight='28-33')
     :markdown
-      ## Create a custom alert message
+      ## Create a Custom Alert Message
 
       Here we create an alert message to send out via text message. You might also
       decide to include a picture with your alert message, maybe a screenshot of the
@@ -72,7 +74,7 @@
   .step(data-file='notifications/service/AdministratorService.java',
   data-highlight='25')
     :markdown
-      ## Reading the admins from the JSON file
+      ## Reading the Admins from the JSON File
 
       Next we read the admins from our JSON file. We're relying on the
       [Gson](https://github.com/google/gson) Java library to convert our JSON
@@ -82,12 +84,10 @@
 
       **See Also:**
       * [Gson](https://github.com/google/gson)
-      * [JSON](http://www.json.org/)
 
-  .step(data-file='notifications/domain/twilio/Client.java',
-  data-highlight='27-45')
+  .step(data-file='src/main/java/com/twilio/notifications/domain/twilio/TwilioMessageCreator.java')
     :markdown
-      ## Sending a text message
+      ## Sending a Text Message
 
       There are the three parameters needed to [send an
       SMS](https://www.twilio.com/docs/quickstart/java/sms/sending-via-rest)
@@ -125,6 +125,6 @@
 
       ### Did this help?
 
-      Thanks for checking out this tutorial! If you have any feedback to share
-      with us, we'd love to hear it. Tweet [@twilio](http://twitter.com/twilio)
-      to let us know what you think.
+      Thanks for checking this tutorial out! If you have any feedback
+      to share with us, we'd love to hear it.
+      [Contact the Twilio Developer Education Team](mailto:deved-oss@twilio.com) to let us know what you think.
