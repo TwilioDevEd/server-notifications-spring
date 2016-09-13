@@ -40,8 +40,8 @@
         <!-- Twilio -->
         <dependency>
             <groupId>com.twilio.sdk</groupId>
-            <artifactId>twilio-java-sdk</artifactId>
-            <version>5.0.0</version>
+            <artifactId>twilio</artifactId>
+            <version>7.0.0-rc-25</version>
         </dependency>
 
         <!-- Gson -->
