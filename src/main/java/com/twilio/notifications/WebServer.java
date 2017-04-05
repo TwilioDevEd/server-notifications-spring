@@ -1,5 +1,6 @@
 package com.twilio.notifications;
 
+import org.eclipse.jetty.server.NCSARequestLog;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -41,9 +42,22 @@ public class WebServer {
         logger.debug("Starting server at port {}", port);
         Server server = new Server(port);
         server.setHandler(getServletContextHandler(getContext()));
+        server.setRequestLog(getNcsaRequestLog());
         server.start();
         logger.info("Server started at port {}", port);
         server.join();
+    }
+
+    private NCSARequestLog getNcsaRequestLog() {
+        NCSARequestLog requestLog = new NCSARequestLog();
+        requestLog.setAppend(true);
+        requestLog.setExtended(true);
+        requestLog.setLogCookies(true);
+        requestLog.setLogLatency(true);
+        requestLog.setLogServer(true);
+        requestLog.setLogTimeZone("GMT");
+        requestLog.setLogLatency(true);
+        return requestLog;
     }
 
     private static ServletContextHandler getServletContextHandler(WebApplicationContext context) throws IOException {
@@ -53,6 +67,7 @@ public class WebServer {
         contextHandler.addServlet(new ServletHolder(new DispatcherServlet(context)), MAPPING_URL);
         contextHandler.addEventListener(new ContextLoaderListener(context));
         contextHandler.setResourceBase(new ClassPathResource("webapp").getURI().toString());
+
         return contextHandler;
     }
 
