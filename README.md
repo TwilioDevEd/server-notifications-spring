@@ -14,20 +14,20 @@ Use Twilio to send SMS alerts so that you never miss a critical issue.
    cd server-notifications-spring
    ```
 
-2. Export the environment variables:
+2. Add the environment variables:
 
    You can find the AccountSID and the AuthToken at [https://www.twilio.com/console](https://www.twilio.com/console).
 
    ```bash
-   export TWILIO_ACCOUNT_SID=your account sid
-   export TWILIO_AUTH_TOKEN=your auth token
+   TWILIO_ACCOUNT_SID=your account sid
+   TWILIO_AUTH_TOKEN=your auth token
    ```
 
    The Twilio Phone Number can be found in the 
    [Twilio Console](https://www.twilio.com/console/phone-numbers/incoming). 
 
    ```bash
-   export TWILIO_PHONE_NUMBER=your Twilio phone number
+   TWILIO_PHONE_NUMBER=your Twilio phone number
    ```
 
 3. Make sure the tests succeed:
