@@ -18,7 +18,7 @@
 
     <properties>
         <spring.version>4.2.1.RELEASE</spring.version>
-        <jetty.version>9.4.3.v20170317</jetty.version>
+        <jetty.version>9.4.51.v20230217</jetty.version>
     	<logback.version>1.1.7</logback.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -143,8 +143,7 @@
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>com.twilio.notifications.WebServer</mainClass>
                                 </transformer>
                             </transformers>
